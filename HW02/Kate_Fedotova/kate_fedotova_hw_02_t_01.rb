@@ -13,7 +13,7 @@ file = File.new('task_1.txt')
 lines = file.readlines
 
 lines.each do |line|
-    if line.match('')
+    if line.include?('error')
         puts line
     end
 end

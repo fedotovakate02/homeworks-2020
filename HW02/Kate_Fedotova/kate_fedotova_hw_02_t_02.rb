@@ -5,7 +5,7 @@ unless File.exist?('task_2.txt')
 end
  
 if File.open('task_2.txt')
-puts 'File open:' + 'task_1.txt'
+puts 'File open:' + 'task_2.txt'
 end
 
 file = File.new('task_2.txt')
