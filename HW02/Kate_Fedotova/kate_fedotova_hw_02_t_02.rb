@@ -1,17 +1,12 @@
-log_file = File.open('task_2.txt'){|file| file.read}
+if File.open('task_2.txt')
+  puts 'File open:' + 'task_2.txt'
+end
 
 unless File.exist?('task_2.txt')
     abort 'File is not exist!'
 end
- 
-if File.open('task_2.txt')
-puts 'File open:' + 'task_2.txt'
-end
 
-file = File.new('task_2.txt')
-
-logs = file.readlines
-
+logs = File.readlines('task_2.txt')
   
 def new_format(lines)
     array = []
@@ -26,10 +21,4 @@ def new_format(lines)
   array
 end
 
-puts new_format(logs)
-
-
-
-
-    
-   
+puts new_format(logs)   
