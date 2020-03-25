@@ -1,15 +1,9 @@
-if File.open('task_1.txt')
-  puts 'File open:' + 'task_1.txt'
-end
+puts 'File open: task_1.txt' if File.open('task_1.txt')
 
-unless File.exist?('task_1.txt')
-  abort 'File is not exist!'
-end
+abort 'File is not exist!' unless File.exist?('task_1.txt')
 
 lines = File.readlines('task_1.txt')
 
 lines.each do |line|
-  if line.include?('error')
-    puts line
-  end
+  puts line if line.include?('error')
 end
