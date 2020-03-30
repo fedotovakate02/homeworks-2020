@@ -1,10 +1,17 @@
 class Student
-    attr_accessor :name, :surname, :homework
+    attr_accessor :name, :surname
 
-    def initialize(name, surname, homework)
+    def initialize(name, surname)
         @name = name
         @surname = surname
-        @homework = homework
+    end
+
+    def submit_homework(new_hw)
+       
+    end
+
+    def presence_of_a_mentor?
+       
     end
 
 end

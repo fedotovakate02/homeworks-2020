@@ -1,3 +1,3 @@
-class Notification < Mentor
+class Notification 
     attr_accessor :data
 end

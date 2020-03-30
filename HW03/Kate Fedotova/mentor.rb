@@ -1,9 +1,20 @@
 class Mentor
-    attr_accessor :name, :surname, :student
+    attr_accessor :name, :surname
 
-    def initialize(name, surname, student)
+    def initialize(name, surname)
         @name = name
         @surname = surname
-        @student = student
+    end
+
+    def subscribe_to
+        
+    end
+
+    def notifications
+       
+    end
+
+    def read_notifications
+       
     end
 end
