@@ -1,3 +1,3 @@
-class Notification 
-    attr_accessor :data
+class Notification
+  attr_accessor :data
 end

@@ -1,3 +1,7 @@
-class Homework  
-    attr_accessor :data
+class Homework
+  attr_accessor :data
+
+  def initialize(data)
+    @data = data
+  end
 end
