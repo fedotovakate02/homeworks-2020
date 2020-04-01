@@ -8,3 +8,12 @@ mentor = Mentor.new('Jack', 'Gonsales')
 
 student.submit_homework('homework_1')
 student.homeworks # => [Homework, ...]
+
+mentor.subscribe_to(student)
+mentor.notifications # => []
+
+student.submit_homework('homework_1')
+mentor.notifications # => [Notification, ...]
+
+mentor.read_notifications
+mentor.notifications # => []
