@@ -1,5 +1,5 @@
 class Mentor
-  attr_accessor :name, :surname, :notifications
+  attr_reader :name, :surname, :notifications
 
   def initialize(name, surname)
     @name = name
@@ -13,11 +13,11 @@ class Mentor
 
   def send_notification(message)
     notification = Notification.new(message)
-    @notifications << notification
+    notifications << notification
   end
 
   def read_notifications
     puts @notifications.to_s
-    @notifications = []
+    notifications.clear
   end
 end

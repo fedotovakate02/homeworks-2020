@@ -7,10 +7,9 @@ class Student
     @homeworks = []
   end
 
-  def submit_homework(new_hw)
-    homework = Homework.new(new_hw)
+  def submit_homework(homework)
     @homeworks << homework
-    notification_message = "#{name} #{surname} submit homework: #{new_hw}"
+    notification_message = "#{name} #{surname} submit homework:#{homework.data}"
     send_notification(notification_message)
     puts homeworks.to_s
   end

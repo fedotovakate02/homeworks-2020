@@ -1,5 +1,5 @@
 class Notification
-  attr_accessor :data
+  attr_reader :data
 
   def initialize(data)
     @data = data
