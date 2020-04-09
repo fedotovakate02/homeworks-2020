@@ -24,11 +24,10 @@ class Array
     return to_enum unless block_given?
 
     result = []
-    i = 0
     (0..length - 1).each do |item_idx|
       result << self[item_idx] if yield(self[item_idx])
     end
 
     result
-      end
+  end
 end

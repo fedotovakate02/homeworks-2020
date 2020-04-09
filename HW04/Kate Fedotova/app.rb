@@ -7,5 +7,5 @@ class App
   puts 'my_map'
   puts arr.my_map
   puts 'my_select'
-  puts arr.my_select { |el| el > 2 }
+  arr.my_select { |el| puts el > 2 }
 end
