@@ -2,19 +2,19 @@ class Array
   def my_each
     return self unless block_given?
 
-    (0..length - 1).each do |item_idx|
-      yield(self[item_idx])
+    (0..length - 1).each do |index|
+      yield(self[index])
     end
 
     self
   end
 
   def my_map
-    return clone.to_enum unless block_given?
+    return to_enum unless block_given?
 
     result = []
-    (0..length - 1).each do |item_idx|
-      result << yield(self[item_idx])
+    (0..length - 1).each do |index|
+      result << yield(self[index])
     end
 
     result
@@ -24,8 +24,8 @@ class Array
     return to_enum unless block_given?
 
     result = []
-    (0..length - 1).each do |item_idx|
-      result << self[item_idx] if yield(self[item_idx])
+    (0..length - 1).each do |index|
+      result << self[index] if yield(self[index])
     end
 
     result
