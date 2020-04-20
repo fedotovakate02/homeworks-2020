@@ -2,6 +2,7 @@ require 'rspec'
 require 'rubocop-rspec'
 require_relative 'arr.rb'
 
+# rubocop:disable Metrics/BlockLength
 describe Array do
   describe 'my_each' do
     let(:arr) { [1, 2, 3, 4] }
@@ -11,6 +12,7 @@ describe Array do
       arr.my_select { |el| new_arr << el }
       expect(new_arr).to eq([1, 2, 3, 4])
     end
+  end
 
   describe 'my_map' do
     let(:arr) { [1, 2, 3, 4] }
@@ -21,7 +23,7 @@ describe Array do
 
     it 'without block' do
       expect(arr.my_select).to be_an_instance_of(Enumerator)
-    end 
+    end
   end
 
   describe 'my_select' do
@@ -36,3 +38,4 @@ describe Array do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
