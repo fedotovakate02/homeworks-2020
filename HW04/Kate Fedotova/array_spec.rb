@@ -7,10 +7,11 @@ describe Array do
     subject(:arr) { [1, 2, 3, 4] }
 
     context 'when has block' do
-      it 'return arr items +1'
-      new_arr = []
-      arr.my_select { |el| new_arr << el }
-      expect(new_arr).to eq([1, 2, 3, 4])
+      it 'return arr items +1' do
+        new_arr = []
+        arr.my_select { |el| new_arr << el }
+        expect(new_arr).to eq([1, 2, 3, 4])
+      end
     end
   end
 
@@ -18,13 +19,15 @@ describe Array do
     subject(:arr) { [1, 2, 3, 4] }
 
     context 'when has block' do
-      it 'return arr items +1'
-      expect(arr.my_map { |el| el + 1 }).to eq([2, 3, 4, 5])
+      it 'return arr items +1' do
+        expect(arr.my_map { |el| el + 1 }).to eq([2, 3, 4, 5])
+      end
     end
 
     context 'when without block' do
-      it 'return arr items +1'
-      expect(arr.my_select).to be_an_instance_of(Enumerator)
+      it 'return arr items +1' do
+        expect(arr.my_select).to be_an_instance_of(Enumerator)
+      end
     end
   end
 
@@ -32,13 +35,15 @@ describe Array do
     subject(:arr) { [1, 2, 3, 4] }
 
     context 'when has block' do
-      it 'return arr items +1'
-      expect(arr.my_select { |el| el >= 2 }).to eq([2, 3, 4])
+      it 'return arr items +1' do
+        expect(arr.my_select { |el| el >= 2 }).to eq([2, 3, 4])
+      end
     end
 
     context 'when without block' do
-      it 'return arr items +1'
-      expect(arr.my_select).to be_an_instance_of(Enumerator)
+      it 'return arr items +1' do
+        expect(arr.my_select).to be_an_instance_of(Enumerator)
+      end
     end
   end
 end
